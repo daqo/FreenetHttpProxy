@@ -1,0 +1,6 @@
+#url_form
+  %form.form-online{:class=>'form-inline', :role=>'form', :method=>'GET',:action=>'/serve'}
+    .form_group
+      %label{:class=>'sr-only', :for=>'url'} URL:
+      %input{:class=>'form-control', :type=>'text',:name=>'url',:id=>'url',:value=>(defined?(params[:url]) ? params[:url] : '')}
+    %button{:class=>'btn btn-default', :type=>'submit',:value=>'Go!'}Submit

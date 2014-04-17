@@ -1,0 +1,10 @@
+%table{:class => 'table table-striped'}
+  %tr
+    %th URL Requested
+    %th IP
+    %th Requested At
+  - @records.each do |item|
+    %tr
+      %td= item.hostname
+      %td= item.ip
+      %td= item.requested_at.strftime('%F %H:%M')
